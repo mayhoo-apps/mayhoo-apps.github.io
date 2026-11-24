@@ -47,14 +47,14 @@ footer{padding:40px 0 56px;color:var(--muted);font-size:15px;text-align:center}
 <p class="tag">Games that just let you play.</p>
 <p class="sub">No ads. No tracking. Free for everyone, paid for by supporters.</p>
 <div class="get">
-<a class="btn big" data-app="hub" href="#games">Get the Mayhoo hub for Android</a>
-<p class="sub small">The hub installs and updates every Mayhoo game. Only want one game? Download it on its own below.</p>
+<a class="btn big" data-app="hub" href="#games">Get the Mayhoo app for Android</a>
+<p class="sub small">The Mayhoo app installs and updates every Mayhoo game. Only want one game? Download it on its own below.</p>
 </div>
 </header>
 <section id="games">
 <h2>The games</h2>
 <div class="grid">
-<div class="card"><div class="icon" style="background:#1F2233;border:2px solid #3A3F58"><svg viewBox="0 0 200 120" aria-hidden="true"><use href="#owl"/></svg><span>Mayhoo</span></div><h3>Mayhoo hub</h3><p>Every Mayhoo game in one place. Installs and updates the rest.</p><span class="soon" data-app="hub">Coming soon</span></div>
+<div class="card"><div class="icon" style="background:#1F2233;border:2px solid #3A3F58"><svg viewBox="0 0 200 120" aria-hidden="true"><use href="#owl"/></svg><span>Mayhoo</span></div><h3>Mayhoo</h3><p>Start here: every Mayhoo game in one place. Installs and updates the rest.</p><span class="soon" data-app="hub">Coming soon</span></div>
 <div class="card"><div class="icon" style="background:#C8414F"><svg viewBox="0 0 200 120" aria-hidden="true"><use href="#owl"/></svg><span>Cards</span></div><h3>Mayhoo Cards</h3><p>Euchre and Hearts now; Spades and Cribbage next. Against friendly bots.</p><span class="soon" data-app="cards">Coming soon</span></div>
 <div class="card"><div class="icon" style="background:#A65418"><svg viewBox="0 0 200 120" aria-hidden="true"><use href="#owl"/></svg><span>Rummy</span></div><h3>Mayhoo Rummy</h3><p>Rummy 500 and Hand and Foot now; Gin and Canasta later.</p><span class="soon" data-app="rummy">Coming soon</span></div>
 <div class="card"><div class="icon" style="background:#2D6FA3"><svg viewBox="0 0 200 120" aria-hidden="true"><use href="#owl"/></svg><span>Solitaire</span></div><h3>Mayhoo Solitaire</h3><p>Klondike, FreeCell, Spider and the classics.</p><span class="soon">Coming soon</span></div>
@@ -74,7 +74,7 @@ footer{padding:40px 0 56px;color:var(--muted);font-size:15px;text-align:center}
 <div><b>No ads, ever</b>Nothing pops up, nothing to watch for coins.</div>
 <div><b>No pressure</b>Stay on the easy levels as long as you like. About every 50 games we ask once if you would like to chip in, and that is it.</div>
 <div><b>Works offline</b>No account, no sign-in, no tracking.</div>
-<div><b>Open source</b>All the code is on <a href="https://github.com/mayhoo-apps">GitHub</a>.</div>
+<div><b>Straight from the source</b>Every download is published on <a href="https://github.com/mayhoo-apps/mayhoo-releases/releases">GitHub</a>.</div>
 </div>
 </section>
 
@@ -98,7 +98,7 @@ footer{padding:40px 0 56px;color:var(--muted);font-size:15px;text-align:center}
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><g id="owl"><path d="M18 36 L28 4 L54 26 Z" fill="#F6F4EF"/><path d="M182 36 L172 4 L146 26 Z" fill="#F6F4EF"/><circle cx="52" cy="70" r="40" fill="#1F2233" stroke="#F6F4EF" stroke-width="14"/><circle cx="148" cy="70" r="40" fill="#1F2233" stroke="#F6F4EF" stroke-width="14"/><circle cx="61" cy="73" r="17" fill="#F2A93B"/><circle cx="139" cy="73" r="17" fill="#F2A93B"/><path d="M91 84 L109 84 L100 102 Z" fill="#F2A93B"/></g></defs></svg>
 <script>
 // Point each download at the newest GitHub release for that app (tags like cards-v0.38).
-fetch("https://api.github.com/repos/mayhoo-apps/mayhoo-games/releases?per_page=50")
+fetch("https://api.github.com/repos/mayhoo-apps/mayhoo-releases/releases?per_page=50")
   .then(r => r.ok ? r.json() : [])
   .then(rels => {
     const newest = {};
