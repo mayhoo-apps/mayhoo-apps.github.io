@@ -97,14 +97,14 @@ footer{padding:40px 0 56px;color:var(--muted);font-size:15px;text-align:center}
 </div>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><g id="owl"><path d="M18 36 L28 4 L54 26 Z" fill="#F6F4EF"/><path d="M182 36 L172 4 L146 26 Z" fill="#F6F4EF"/><circle cx="52" cy="70" r="40" fill="#1F2233" stroke="#F6F4EF" stroke-width="14"/><circle cx="148" cy="70" r="40" fill="#1F2233" stroke="#F6F4EF" stroke-width="14"/><circle cx="61" cy="73" r="17" fill="#F2A93B"/><circle cx="139" cy="73" r="17" fill="#F2A93B"/><path d="M91 84 L109 84 L100 102 Z" fill="#F2A93B"/></g></defs></svg>
 <script>
-// Point each download at the newest GitHub release for that app (tags like cards-v0.38).
-fetch("https://api.github.com/repos/mayhoo-apps/mayhoo-releases/releases?per_page=50")
+// Point each download at the newest GitHub release for that app (tags like 20261124-1536-cards-v0.48).
+fetch("https://api.github.com/repos/mayhoo-apps/mayhoo-releases/releases?per_page=100")
   .then(r => r.ok ? r.json() : [])
   .then(rels => {
     const newest = {};
     for (const r of rels) {
       if (r.draft || r.prerelease) continue;
-      const m = /^([a-z]+)-v(.+)$/.exec(r.tag_name || "");
+      const m = /^(?:\d{8}-\d{4}-)?([a-z]+)-v(.+)$/.exec(r.tag_name || "");
       const apk = (r.assets || []).find(a => a.name.endsWith(".apk"));
       if (!m || !apk) continue;
       const cmp = (a, b) => { const x = a.split("."), y = b.split("."); for (let i = 0; i < Math.max(x.length, y.length); i++) { const d = (+x[i] || 0) - (+y[i] || 0); if (d) return d; } return 0; };
