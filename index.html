@@ -36,7 +36,7 @@ h2{font-size:28px;margin:0 0 16px}
 .promise b{display:block;font-size:19px}
 .sponsor{background:var(--ink2);border-radius:20px;padding:28px}
 .sponsor ul{margin:8px 0 16px;padding-left:22px}
-.get{margin-top:24px}.btn.big{font-size:20px;padding:14px 22px}.small{font-size:15px}
+.get{margin-top:24px}.choices{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}.btn.alt{background:transparent;color:var(--amber);border:2px solid var(--amber)}.btn.big{font-size:20px;padding:14px 22px}.small{font-size:15px}
 footer{padding:40px 0 56px;color:var(--muted);font-size:15px;text-align:center}
 </style>
 </head>
@@ -47,8 +47,12 @@ footer{padding:40px 0 56px;color:var(--muted);font-size:15px;text-align:center}
 <p class="tag">Games that just let you play.</p>
 <p class="sub">No ads. No tracking. Free for everyone, paid for by supporters.</p>
 <div class="get">
-<a class="btn big" data-app="hub" href="#games">Get Mayhoo Hub for Android</a>
-<p class="sub small">Mayhoo Hub installs and updates every Mayhoo game. Only want one game? Download it on its own below.</p>
+<div class="choices">
+<a class="btn big" href="https://play.google.com/store/apps/details?id=com.mayhoo.hub">Get Mayhoo Hub on Google Play</a>
+<a class="btn big alt" data-app="hub" href="#games">Download direct (early access)</a>
+</div>
+<p class="sub small">Google Play is the easy way: installs and updates are automatic. The direct download gets new games and features first, before they reach Google Play.</p>
+<p class="sub small">Mayhoo Hub opens and updates every Mayhoo game. Only want one game? Download it on its own below.</p>
 </div>
 </header>
 <section id="games">
